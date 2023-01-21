@@ -1,14 +1,4 @@
 console.log("this is validation form")
-
-const signup = document.getElementById("signup");
-
-
-signup.addEventListener("click", function (e) {
-    e.preventDefault();
-    validateForm();
-
-});
-
 const name1 = document.getElementById('name1');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
@@ -78,5 +68,25 @@ newPassword.addEventListener('blur',()=>{
     }
 })
 
+    let signup = document.getElementById('signup');
+    signup.addEventListener('click', (e)=>{
+        e.preventDefault();
 
+        console.log('You clicked on Signup');
+        console.log(namevalid,emailvalid,passwordvalid, cPasswordvalid)
+        //Submit Your Form Here
+        if(namevalid && emailvalid && passwordvalid && cPasswordvalid){
+            console.log('Name, Email, Password and Confirmpassword are valid. submitting the form.');
+            let success = document.getElementById('success');
+            success.classList.add('show');
+            failure.classList.remove('show');
+        }else{
+            console.log('one of email, name and password are not valid, hence not submitting the form, plese correct the errors and try again');
+            let failure = document.getElementById('failure');
+            failure.classList.add('show');
+            success.classList.remove('show');
+        }
+        
+
+    })
 

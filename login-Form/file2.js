@@ -1,11 +1,24 @@
-const submit = document.getElementById("submit");
-
-
-submit.addEventListener("click", function (e) {
+let submit = document.getElementById('submit');
+submit.addEventListener('click', (e)=>{
     e.preventDefault();
-    validateForm();
 
-});
+    console.log('You clicked on submit');
+    console.log(emailvalid,passwordvalid)
+    //Submit Your Form Here
+    if(emailvalid && passwordvalid){
+        console.log(' Email and Password are valid. submitting the form.');
+        let success = document.getElementById('success');
+        success.classList.add('show');
+        failure.classList.remove('show');
+    }else{
+        console.log('one of email, name and password are not valid, hence not submitting the form, plese correct the errors and try again');
+        let failure = document.getElementById('failure');
+        failure.classList.add('show');
+        success.classList.remove('show');
+    }
+    
+
+})
 function validateForm() {
     const inputemail = document.getElementById("inputEmail");
     const inputpassword = document.getElementById("inputPassword");
