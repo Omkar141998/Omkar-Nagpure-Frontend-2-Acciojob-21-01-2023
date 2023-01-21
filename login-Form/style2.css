@@ -1,0 +1,22 @@
+ body{
+    margin: 50px 500px;
+    padding: 0 100px;
+}
+/* .form-group{ */
+   /* margin: 10px;
+   padding: 50px;
+} */ 
+
+/* *{
+    margin: 50px 500px;
+    padding: 0 100px;
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+}*/
+
+ #inputerror{
+    position: absolute;
+    top: 40%;
+    color: red;
+} 
